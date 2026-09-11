@@ -1,0 +1,64 @@
+name: Bug report
+description: Report reproducible behavior that is not working as expected.
+title: "[Bug]: "
+body:
+  - type: checkboxes
+    id: existing-issue
+    attributes:
+      label: Existing issue
+      description: Search open and closed issues before submitting a duplicate.
+      options:
+        - label: I searched for an existing issue.
+          required: true
+
+  - type: textarea
+    id: summary
+    attributes:
+      label: What happened?
+      description: Describe the observed behavior and its impact.
+      placeholder: Tell us what failed and who or what is affected.
+    validations:
+      required: true
+
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: How can we reproduce it?
+      description: Provide the smallest reliable sequence that reproduces the problem.
+      placeholder: |
+        1. Start with...
+        2. Run or select...
+        3. Observe...
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: What did you expect?
+      description: Describe the result that should have occurred.
+    validations:
+      required: true
+
+  - type: textarea
+    id: environment
+    attributes:
+      label: Environment
+      description: Include the affected version, commit, environment, browser, operating system, or runtime when relevant.
+      placeholder: Production, commit abc123, Chrome 140, Windows 11
+    validations:
+      required: true
+
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Logs or supporting evidence
+      description: Add relevant logs, screenshots, or links after removing credentials and personal data.
+
+  - type: checkboxes
+    id: sensitive-data
+    attributes:
+      label: Sensitive data
+      options:
+        - label: I removed credentials, tokens, and personal data from this report.
+          required: true
